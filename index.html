@@ -1,0 +1,92 @@
+<!doctype html>
+<head>
+    <title> Software Engineering Intern </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid ;
+        }
+    </style>
+    <script>
+        function value(index) {
+            const table1Data = {
+                "A1": 41, "A2": 18, "A3": 21, "A4": 63, "A5": 2,
+                "A6": 53, "A7": 5, "A8": 57, "A9": 60, "A10": 93,
+                "A11": 28, "A12": 3, "A13": 90, "A14": 39, "A15": 80,
+                "A16": 88, "A17": 49, "A18": 60, "A19": 26, "A20": 28
+            };
+            return table1Data[index];
+        }
+
+        function calculateTable2() {
+            const Alpha = value('A5') + value('A20');
+            const Beta = value('A15') / value('A7');
+            const Charlie = value('A13') * value('A12');
+
+            document.getElementById('Alpha').innerHTML = value('A5') + " + " + value('A20');
+            document.getElementById('Beta').innerHTML =value('A15') + " / " + value('A7');
+            document.getElementById('Charlie').innerHTML = value('A13') + " * " + value('A12');
+        }
+
+        window.onload = calculateTable2;
+    </script>
+</head>
+<body>
+    <h1> Table 1 </h1>
+    <table>
+        <thead>
+            <tr>
+                <th> Index # </th>
+                <th> Value </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><th> A1 </th><th> 41 </th></tr>
+            <tr><th> A2 </th><th> 18 </th></tr>
+            <tr><th> A3 </th><th> 21 </th></tr>
+            <tr><th> A4 </th><th> 63 </th></tr>
+            <tr><th> A5 </th><th> 2 </th></tr>
+            <tr><th> A6 </th><th> 53 </th></tr>
+            <tr><th> A7 </th><th> 5 </th></tr>
+            <tr><th> A8 </th><th> 57 </th></tr>
+            <tr><th> A9 </th><th> 60 </th></tr>
+            <tr><th> A10 </th><th> 93 </th></tr>
+            <tr><th> A11 </th><th> 28 </th></tr>
+            <tr><th> A12 </th><th> 3 </th></tr>
+            <tr><th> A13 </th><th> 90 </th></tr>
+            <tr><th> A14 </th><th> 39 </th></tr>
+            <tr><th> A15 </th><th> 80 </th></tr>
+            <tr><th> A16 </th><th> 88 </th></tr>
+            <tr><th> A17 </th><th> 49 </th></tr>
+            <tr><th> A18 </th><th> 60 </th></tr>
+            <tr><th> A19 </th><th> 26 </th></tr>
+            <tr><th> A20 </th><th> 28 </th></tr>
+        </tbody>
+    </table>
+
+    <h1> Table 2 </h1>
+    <table>
+        <thead>
+            <tr>
+                <th> Category </th>
+                <th> Value </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td> Alpha </td><td id='Alpha'></td></tr>
+            <tr><td> Beta </td><td id='Beta'></td></tr>
+            <tr><td> Charlie </td><td id='Charlie'></td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
